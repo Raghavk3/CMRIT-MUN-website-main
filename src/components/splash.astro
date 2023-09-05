@@ -11,25 +11,32 @@ const sizes = "(min-width: 640px) 42vw, 67vw";
 ---
 
 <section class="relative h-full bg-black">
-  <Starfield />
+  <img src="Conference_1.jpeg" alt="Background Image" class="absolute inset-0 w-full h-full object-cover opacity-70" style="z-index: -1;">
+  <!-- <Starfield /> -->
   <GitHubCorner />
   <div id="splash-bg-fallback" class="absolute inset-0 hidden opacity-40">
     <HeroImage />
   </div>
-  <div class="relative grid h-full place-items-center sm:grid-cols-2">
-    <h2
-      class="flex flex-col gap-2 self-end sm:gap-4 sm:self-auto sm:justify-self-end"
-    >
-      <Icon name="logomark" class="h-24 text-white md:h-32" />
-      <div
-        class="gradient-text text-center font-extrabold tracking-tighter text-8xl"
-      >
-        Build fast
-        <br /> websites,
-        <br /> faster.
-      </div>
-    </h2>
+  <div class="relative grid h-full place-items-center sm:grid-cols-2" id="first_page">
+  <h2
+    class="flex flex-col gap-2 self-end sm:gap-4 sm:self-auto sm:justify-self-end text-center"
+    style="position: absolute; top: 50%; left: 50%; transform: translate(-50%, -50%);"
+  >
+    <Icon name="logomark" class="h-24 text-white md:h-32" />
     <div
+      class="gradient-text text-center font-extrabold tracking-tighter text-8xl"
+    >
+      CMRIT MUN 2023
+      <div>
+        <font size="7">7th, 8th and 9th December</font>
+      </div>
+      <div style="margin-top: -35px;">
+        <font size="7">CMRIT, Hyderabad</font>
+      </div>
+    </div>
+  </h2>
+  
+    <!-- <div
       id="astronaut"
       class="w-2/3 max-w-3xl self-start sm:w-10/12 sm:self-auto sm:justify-self-start"
     >
@@ -41,7 +48,7 @@ const sizes = "(min-width: 640px) 42vw, 67vw";
         loading="eager"
         alt="A floating astronaut in a space suit"
       />
-    </div>
+    </div> -->
   </div>
 </section>
 
