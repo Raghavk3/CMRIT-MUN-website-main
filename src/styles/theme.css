@@ -17,3 +17,10 @@
   --color-background-offset: theme("colors.gray.800");
   --color-border: theme("colors.gray.50" / 10%);
 }
+
+/* #first_page{
+  margin: 0;
+  padding: 0;
+  text-align: center;
+  position: absolute;
+} */
