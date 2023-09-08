@@ -5,60 +5,50 @@ import type { FeatureItem } from "~/types";
 
 const features: Array<FeatureItem> = [
   {
-    title: "Bring Your Own Framework",
+    title: "AIPPM",
+    subtitle:"ALL INDIA POLITICAL PARTY MEET",
     description:
-      "Build your site using React, Svelte, Vue, Preact, web components, or just plain ol' HTML + JavaScript.",
+      "AIPPM is a simulated committee in Model United Nations that focuses on the political landscape of India. It provides a platform for delegates to represent various political parties and engage in discussions regarding national and regional policies. Delegates analyze current political issues, draft resolutions, and negotiate with other parties to find solutions. AIPPM aims to enhance participants' understanding of Indian politics, policy-making, and coalition building.",
     icon: "mdi:handshake",
   },
   {
-    title: "100% Static HTML, No JS",
+    title: "UNHRC",
+    subtitle:"UNITED NATIONS HUMAN RIGHTS COUNCIL",
     description:
-      "Astro renders your entire page to static HTML, removing all JavaScript from your final build by default.",
-    icon: "mdi:feather",
+      "UNHRC is a key committee in Model United Nations that addresses human rights issues on a global scale. Delegates in this committee represent different countries and work towards promoting and protecting human rights worldwide. They debate and develop resolutions related to pressing human rights concerns, such as freedom of expression, gender equality, and the rights of vulnerable populations. UNHRC plays a crucial role in raising awareness and taking action to ensure the realization of human rights for all.",
+    icon: "mdi:human rights",
   },
   {
-    title: "On-Demand Components",
+    title: "DISEC",
+    subtitle:"DISARMAMENT & INTERNATIONAL SECURITY COMMITTEE",
     description:
-      "Need some JS? Astro can automatically hydrate interactive components when they become visible on the page. If the user never sees it, they never load it.",
-    icon: "mdi:directions-fork",
+      "DISEC is a prominent committee in Model United Nations focused on matters related to disarmament, global security, and non-proliferation of weapons. Delegates representing different countries deliberate on a range of topics, including nuclear disarmament, arms control, cybersecurity, and counter-terrorism. Through research, negotiation, and drafting resolutions, DISEC seeks to establish measures that enhance international security, reduce arms race tensions, and foster cooperation among nations.",
+    icon: "mdi:security",
   },
   {
-    title: "Broad Integration",
+    title: "IP",
+    subtitle:"INTERNATIONAL PRESS",
     description:
-      "Astro supports TypeScript, Scoped CSS, CSS Modules, Sass, Tailwind, Markdown, MDX, and any of your favorite npm packages.",
-    icon: "mdi:graph",
-  },
-  {
-    title: "SEO Enabled",
-    description:
-      "Automatic sitemaps, RSS feeds, pagination and collections take the pain out of SEO and syndication.",
-    icon: "mdi:search-web",
-  },
-  {
-    title: "Community",
-    description:
-      "Astro is an open source project powered by hundreds of contributors making thousands of individual contributions.",
-    icon: "mdi:account-group",
+      "The International Press Committee in Model United Nations is responsible for reporting on the proceedings and activities of the conference. Participants in this committee take on the role of journalists, photographers, and media personnel. They gather information, conduct interviews, and produce news articles, press releases, and multimedia content. The International Press plays a vital role in disseminating information, fostering dialogue, and documenting the diverse perspectives and diplomatic efforts of the Model UN conference.",
+    icon: "mdi:camera",
   },
 ];
 ---
 
-<ContentSection title="Features" id="features">
+<ContentSection title="Committees" id="features">
   <Fragment slot="lead">
-    Astro comes <span class="text-primary">batteries included</span>. It takes
-    the best parts of
-    <span class="text-primary">state-of-the-art</span>
-     tools and adds its own <span class="text-primary">innovations</span>.
+    Our Committee Selection
   </Fragment>
-  <ul class="grid max-w-6xl grid-cols-1 md:grid-cols-2 lg:grid-cols-3">
+  <ul class="grid max-w-6xl grid-cols-1 md:grid-cols-2 lg:grid-cols-2">
     {
-      features.map(({ title, description, icon }) => (
+      features.map(({ title, subtitle,description, icon }) => (
         <li class="flex flex-col items-center gap-4 border border-default bg-offset p-6">
           <div class="h-16 w-16 rounded-full border-2 border-current p-3">
             <Icon name={icon} />
           </div>
           <p class="text-center font-extrabold text-xl">{title}</p>
-          <p class="text-center text-offset text-sm">{description}</p>
+          <p class="text-center font-extrabold text-sm">{subtitle}</p>
+          <p class="text-justify text-offset text-sm">{description}</p>
         </li>
       ))
     }

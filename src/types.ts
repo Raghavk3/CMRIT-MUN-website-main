@@ -7,6 +7,7 @@ export interface CompatibilityItem {
 export interface FeatureItem {
   description: string;
   icon: string;
+  subtitle:string;
   title: string;
 }
 

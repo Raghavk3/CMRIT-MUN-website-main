@@ -1,5 +1,4 @@
 const defaultTheme = require("tailwindcss/defaultTheme");
-
 module.exports = {
   content: ["./src/**/*.{astro,html,js,jsx,svelte,ts,tsx,vue}"],
   theme: {
@@ -27,5 +26,5 @@ module.exports = {
   corePlugins: {
     fontSize: false,
   },
-  plugins: [require("tailwindcss-fluid-type")],
+  plugins: [require("tailwindcss-fluid-type")], 
 };
