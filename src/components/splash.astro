@@ -1,81 +1,35 @@
 ---
-import { Picture } from "@astrojs/image/components";
-import { Icon } from "astro-icon";
-import HeroImage from "~/components/hero-image.astro";
+import LogoImage from "~/components/Logo_image.astro"
+import SplashImage from "~/components/splash-image.astro";
 
 const widths = [450, 800];
 const sizes = "(min-width: 640px) 42vw, 67vw";
 ---
 
-<section class="relative h-full bg-black">
-  <img
-    src="src/assets/Conference_1.jpg"
-    alt="Background Image"
-    class="absolute inset-0 h-full w-full object-cover opacity-70"
-    style="z-index: -1;"
-  />
-
-  <div id="splash-bg-fallback" class="absolute inset-0 hidden opacity-40">
-    <HeroImage />
+<section class="relative h-full">
+  <div class="absolute inset-0 overflow-hidden opacity-10">
+    <SplashImage />
   </div>
   <div
-    class="relative grid h-full place-items-center sm:grid-cols-2"
-    id="first_page"
+  class="relative grid h-full place-items-center sm:grid-cols-2"
+  id="first_page"
   >
-    <h2
-      class="flex flex-col gap-2 self-end text-center sm:gap-4 sm:self-auto sm:justify-self-end"
-      style="position: absolute; top: 50%; left: 50%; transform: translate(-50%, -50%);"
+  <h2
+  class="flex flex-col gap-2 self-end text-center justify-center items-center sm:gap-4 sm:self-auto sm:justify-self-end"
+  style="position: absolute; top: 50%; left: 50%; transform: translate(-50%, -50%);"
+  > 
+    <LogoImage />
+    <div
+    class="gradient-text text-center font-extrabold tracking-tighter text-7xl"
     >
-      <Icon name="logomark" class="h-24 text-white md:h-32" />
-      <div
-        class="gradient-text text-center font-extrabold tracking-tighter text-7xl"
-      >
         CMRIT MUN 2023
-        <div class="tracking-normal my-2">
-          <font size="7">7th, 8th and 9th December</font>
+        <div class="tracking-normal">
+          <font size="5">7th, 8th and 9th Dec </font>
         </div>
-        <div style="margin-top: -35px;">
-          <font class="tracking-normal" size="7">CMRIT, Hyderabad</font>
+        <div class="tracking-normal text-sm">
+          <font size="5">CMRIT, Hyderabad</font>
         </div>
       </div>
     </h2>
   </div>
 </section>
-
-<noscript>
-  <style>
-    #splash-bg-fallback {
-      display: block;
-    }
-  </style>
-</noscript>
-
-<style>
-  @keyframes float {
-    0% {
-      transform: translate3d(0, 0, 0);
-    }
-
-    100% {
-      transform: translate3d(0, 30px, 0);
-    }
-  }
-
-  #astronaut {
-    animation: float linear 2.5s infinite alternate;
-  }
-
-  @media (prefers-reduced-motion: reduce) {
-    #astronaut {
-      @apply animate-none;
-    }
-
-    :global(#starfield) {
-      @apply hidden;
-    }
-
-    #splash-bg-fallback {
-      @apply block;
-    }
-  }
-</style>

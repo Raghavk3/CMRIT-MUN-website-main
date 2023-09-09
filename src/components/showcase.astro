@@ -1,7 +1,6 @@
 ---
 import { getCollection } from "astro:content";
 import ContentSection from "~/components/content-section.astro";
-import { Icon } from "astro-icon";
 import type { FeatureItem } from "~/types";
 
 const featuredSites = await getCollection(
@@ -14,57 +13,55 @@ const orderedSites = featuredSites.sort(
 
 const features: Array<FeatureItem> = [
   {
-    title: "AIPPM",
-    subtitle:"ALL INDIA POLITICAL PARTY MEET",
-    description:
-      "AIPPM is a simulated committee in Model United Nations that focuses on the political landscape of India. It provides a platform for delegates to represent various political parties and engage in discussions regarding national and regional policies. Delegates analyze current political issues, draft resolutions, and negotiate with other parties to find solutions. AIPPM aims to enhance participants' understanding of Indian politics, policy-making, and coalition building.",
+    title: "Sanjana Yammanur",
+    subtitle: "ALL INDIA POLITICAL PARTY MEET",
+    description: "",   
     icon: "mdi:instagram",
   },
   {
-    title: "UNHRC",
-    subtitle:"UNITED NATIONS HUMAN RIGHTS",
+    title: "Mahendra Lakshmi",
+    subtitle: "UNITED NATIONS HUMAN RIGHTS",
     description:
       "UNHRC is a key committee in Model United Nations that addresses human rights issues on a global scale. Delegates in this committee represent different countries and work towards promoting and protecting human rights worldwide. They debate and develop resolutions related to pressing human rights concerns, such as freedom of expression, gender equality, and the rights of vulnerable populations. UNHRC plays a crucial role in raising awareness and taking action to ensure the realization of human rights for all.",
     icon: "mdi:instagram",
   },
   {
-    title: "DISEC",
-    subtitle:"DISARMAMENT & INTERNATIONAL",
+    title: "Chandrika",
+    subtitle: "DISARMAMENT & INTERNATIONAL",
     description:
       "DISEC is a prominent committee in Model United Nations focused on matters related to disarmament, global security, and non-proliferation of weapons. Delegates representing different countries deliberate on a range of topics, including nuclear disarmament, arms control, cybersecurity, and counter-terrorism. Through research, negotiation, and drafting resolutions, DISEC seeks to establish measures that enhance international security, reduce arms race tensions, and foster cooperation among nations.",
     icon: "mdi:security",
   },
   {
-    title: "IP",
-    subtitle:"INTERNATIONAL PRESS",
+    title: "Pramod",
+    subtitle: "INTERNATIONAL PRESS",
     description:
       "The International Press Committee in Model United Nations is responsible for reporting on the proceedings and activities of the conference. Participants in this committee take on the role of journalists, photographers, and media personnel. They gather information, conduct interviews, and produce news articles, press releases, and multimedia content. The International Press plays a vital role in disseminating information, fostering dialogue, and documenting the diverse perspectives and diplomatic efforts of the Model UN conference.",
     icon: "mdi:camera",
   },
   {
-    title: "DISEC",
-    subtitle:"DISARMAMENT & INTERNATIONAL ",
-    description:
-      "DISEC is a prominent committee in Model United Nations focused on matters related to disarmament, global security, and non-proliferation of weapons. Delegates representing different countries deliberate on a range of topics, including nuclear disarmament, arms control, cybersecurity, and counter-terrorism. Through research, negotiation, and drafting resolutions, DISEC seeks to establish measures that enhance international security, reduce arms race tensions, and foster cooperation among nations.",
+    title: "Tanmay Pradhan",
+    subtitle: "USG-IT Head",
+    description:"https://external-content.duckduckgo.com/iu/?u=https%3A%2F%2Ftse2.mm.bing.net%2Fth%3Fid%3DOIF.UfvKhdjsC40Xlh4geoDPqA%26pid%3DApi&f=1&ipt=d88d8018de54d82e79c163a4a685917a260ee5df23894f2f270b2a5331f857fd&ipo=images",
     icon: "mdi:security",
   },
   {
-    title: "IP",
-    subtitle:"INTERNATIONAL PRESS",
+    title: "Raghava",
+    subtitle: "INTERNATIONAL PRESS",
     description:
       "The International Press Committee in Model United Nations is responsible for reporting on the proceedings and activities of the conference. Participants in this committee take on the role of journalists, photographers, and media personnel. They gather information, conduct interviews, and produce news articles, press releases, and multimedia content. The International Press plays a vital role in disseminating information, fostering dialogue, and documenting the diverse perspectives and diplomatic efforts of the Model UN conference.",
     icon: "mdi:camera",
   },
   {
-    title: "DISEC",
-    subtitle:"DISARMAMENT & INTERNATIONAL",
+    title: "Jatin",
+    subtitle: "DISARMAMENT & INTERNATIONAL",
     description:
       "DISEC is a prominent committee in Model United Nations focused on matters related to disarmament, global security, and non-proliferation of weapons. Delegates representing different countries deliberate on a range of topics, including nuclear disarmament, arms control, cybersecurity, and counter-terrorism. Through research, negotiation, and drafting resolutions, DISEC seeks to establish measures that enhance international security, reduce arms race tensions, and foster cooperation among nations.",
     icon: "mdi:security",
   },
   {
-    title: "IP",
-    subtitle:"INTERNATIONAL PRESS",
+    title: "Sakshi Sinha",
+    subtitle: "INTERNATIONAL PRESS",
     description:
       "The International Press Committee in Model United Nations is responsible for reporting on the proceedings and activities of the conference. Participants in this committee take on the role of journalists, photographers, and media personnel. They gather information, conduct interviews, and produce news articles, press releases, and multimedia content. The International Press plays a vital role in disseminating information, fostering dialogue, and documenting the diverse perspectives and diplomatic efforts of the Model UN conference.",
     icon: "mdi:camera",
@@ -76,22 +73,26 @@ const features: Array<FeatureItem> = [
   <Fragment slot="lead">
     Meet our <span class="text-primary">Team</span>.{" "}
   </Fragment>
-<div>
-  <div class="mx-auto max-w-2xl px-4 sm:px-6 sm:py-24 lg:max-w-7xl lg:px-8">
-    <div class="grid grid-cols-1 gap-x-6 gap-y-10 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 xl:gap-x-8">
-      {
-        features.map(({ title, subtitle,icon}) =>(
-          <div>
-            <div class="aspect-h-1 aspect-w-1 w-full overflow-hidden rounded-lg bg-gray-200 xl:aspect-h-8 xl:aspect-w-7">
-              <img src="https://tailwindui.com/img/ecommerce-images/category-page-04-image-card-01.jpg" class="h-full w-full object-cover object-center group-hover:opacity-75">
+  <div style="margin-top:-80px;">
+    <div class="mx-auto max-w-2xl px-4 sm:px-6 sm:py-24 lg:max-w-7xl lg:px-8">
+      <div
+        class="grid grid-cols-1 gap-x-6 gap-y-10 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 xl:gap-x-8"
+      >
+        {
+          features.map(({ title, subtitle,description,icon }) => (
+            <div>
+              <div class="aspect-h-1 aspect-w-1 xl:aspect-h-8 xl:aspect-w-7 w-full overflow-hidden rounded-lg bg-gray-200">
+                <img
+                  src={description}
+                  class="h-full w-full object-cover object-center group-hover:opacity-75"
+                />
+              </div>
+              <h3 class="mt-2 font-bold text-white text-lg">{title}</h3>
+              <p class="text-gray font-medium text-sm">{subtitle}</p>
             </div>
-            <h3 class="mt-2 text-lg font-bold text-white">{title}</h3>
-            <p class="text-sm font-medium text-gray">{subtitle}</p>
-          </div>
-        ))
-      }
+          ))
+        }
+      </div>
     </div>
   </div>
-</div>
-
 </ContentSection>

@@ -1,0 +1,15 @@
+---
+import { Picture } from "@astrojs/image/components";
+import moonImage from "~/assets/Logo.png";
+
+const widths = [400, 800, 1000];
+const sizes = "0vw";
+---
+
+<Picture
+  class="w-56"
+  src={moonImage}
+  widths={widths}
+  sizes={sizes}
+  alt="The ridged surface of the moon"
+/>
