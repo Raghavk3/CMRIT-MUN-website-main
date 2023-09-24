@@ -2,7 +2,7 @@
 import { getCollection } from "astro:content";
 import ContentSection from "~/components/content-section.astro";
 import type { FeatureItem } from "~/types";
-
+import Tanmay  from "../assets/EB/Tanmay.png";
 const featuredSites = await getCollection(
   "showcase",
   ({ data }) => "featured" in data,
@@ -41,7 +41,7 @@ const features: Array<FeatureItem> = [
   {
     title: "Tanmay Pradhan",
     subtitle: "USG-IT Head",
-    description:"https://github.com/tanmaypradhan4112/CMRIT-MUN-website/blob/main/src/assets/EB/Tanmay%20-%20USG%20IT.png?raw=true",
+    description: "",
     icon: "mdi:security",
   },
   {
