@@ -2,7 +2,6 @@
 import { getCollection } from "astro:content";
 import ContentSection from "~/components/content-section.astro";
 import type { FeatureItem } from "~/types";
-import Tanmay  from "../assets/EB/Tanmay.png";
 const featuredSites = await getCollection(
   "showcase",
   ({ data }) => "featured" in data,
@@ -90,13 +89,6 @@ const features: Array<FeatureItem> = [
     subtitle: "OC-Head",
     description:
       "https://github.com/tanmaypradhan4112/CMRIT-MUN-website/blob/main/src/assets/EB/Jahnavi%20-%20OC%20head.png?raw=true",
-    icon: "mdi:camera",
-  },
-  {
-    title: "Rahul Dasari",
-    subtitle: "USG-Digital Head",
-    description:
-      "The International Press Committee in Model United Nations is responsible for reporting on the proceedings and activities of the conference. Participants in this committee take on the role of journalists, photographers, and media personnel. They gather information, conduct interviews, and produce news articles, press releases, and multimedia content. The International Press plays a vital role in disseminating information, fostering dialogue, and documenting the diverse perspectives and diplomatic efforts of the Model UN conference.",
     icon: "mdi:camera",
   },
   {
