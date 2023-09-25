@@ -40,11 +40,21 @@ const links: Array<FooterLink> = [
             target="_blank"
             href={link.url}
           >
-            <span class="sr-only">{link.description}</span>
             <Icon class="h-full" name={link.icon} />
           </a>
         </li>
       ))
     }
   </ul>
+  <div class="text-center mt-2">
+    <span class="text-xs font-bold">
+      © Copyright CMRIT. All Rights Reserved
+    </span>
+  </div>
+  <div class="text-center mt-2">
+    <span class="text-xs text-yellow-500 font-bold">
+      Designed by <a href="https://github.com/tanmaypradhan4112/CMRIT-MUN-website">Board of IT</a>
+    </span>          
+  </div>
 </footer>
+
