@@ -1,12 +1,11 @@
 ---
 import { Icon } from "astro-icon";
-import LogoImage from "~/components/Logo_image.astro";
 import ContentSection from "~/components/content-section.astro";
 ---
 
 <!-- Changing of content -->
 <ContentSection title="Where Ideas become Resolution" id="about">
-  <Fragment slot="lead">
+  <Fragment slot="lead" >
     Every idea, no matter how small, carries the potential to ignite change. 
     It's a call to dreamers, thinkers, and doers, reminding them that within them lies the power to turn vision into reality.
     Join us in shaping the future, one resolution at a time and Welcome to the realm where ideas find their purpose and resolutions light the way forward.
@@ -15,7 +14,7 @@ import ContentSection from "~/components/content-section.astro";
     <!-- Register button -->
     <a
     href="{}"
-    class="flex items-center justify-center gap-3 border-2 border-current px-6 py-4"
+    class="flex items-center text-white justify-center gap-3 border-2 border-current px-6 py-4"
     >
     <Icon pack="mdi" name="register" class="h-8" />
     <span>Registrations</span>
