@@ -27,7 +27,7 @@ const links: Array<FooterLink> = [
 ];
 ---
 
-<footer class="relative text-white z-100 flex h-64 items-center justify-center">
+<footer class="z-100 relative flex h-64 items-center justify-center text-white">
   <div class="absolute inset-0 overflow-hidden opacity-40">
     <HeroImage />
   </div>
@@ -46,15 +46,17 @@ const links: Array<FooterLink> = [
       ))
     }
   </ul>
-  <div class="text-center mt-2">
-    <span class="text-xs font-bold">
-      © Copyright CMRIT. All Rights Reserved
-    </span>
-  </div>
-  <div class="text-center mt-2">
-    <span class="text-xs text-yellow-500 font-bold">
-      Designed by <a href="https://github.com/tanmaypradhan4112/CMRIT-MUN-website">Board of IT</a>
-    </span>          
-  </div>
 </footer>
 
+<div class="text-center">
+  <span class="font-bold text-gray-500 text-xs">
+    © Copyright CMRIT. All Rights Reserved
+  </span>
+</div>
+<div class=" text-center">
+  <span class="font-bold text-yellow-500 text-xs">
+    <a href="https://github.com/tanmaypradhan4112/CMRIT-MUN-website"
+      >Designed by Board of IT</a
+    >
+  </span>
+</div>

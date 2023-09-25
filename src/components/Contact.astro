@@ -1,40 +1,67 @@
 ---
 import ContentSection from "~/components/content-section.astro";
+import type { FeatureItem } from "~/types";
 import { Icon } from "astro-icon";
 
+const contact: Array<FeatureItem> = [
+  {
+    title: "Secretary General",
+    subtitle: "Sanjana",
+    description: "+91 8790928610 ",
+    icon: "https://i.imgur.com/tD8TG0K.png",
+  },
+  {
+    title: "Director General",
+    subtitle: "Mahendra Lakshmi",
+    description: "+91 8121168074",
+    icon: "https://i.imgur.com/eB1skVG.png",
+  },
+  {
+    title: "Delegate Affairs",
+    subtitle: "Keerthana",
+    description: "+91 7989376618",
+    icon: "https://i.imgur.com/WF1pZ8I.png",
+  },
+  {
+    title: "External Affairs",
+    subtitle: "Abrar",
+    description: "+91 8179491027",
+    icon: "https://i.imgur.com/RM8C7rk.png",
+  },
+];
 ---
 
 <ContentSection title="Contact Us" id="contact">
-    <Fragment slot="lead">
-      Get in touch with us!
-    </Fragment>
-    <div class="grid grid-cols-1 gap-y-6 sm:grid-cols-2">
-      <div style="display: flex; align-items: flex-start;">
-        <Icon pack="mdi" name="phone" class="text-primary h-6 w-6" />
-        <span class="text-sm">Secretary General: +91 8790928610 (Sanjana)</span>
-      </div>
-      <div style="display: flex; align-items: flex-start;">
-        <Icon pack="mdi" name="phone" class="text-primary h-6 w-6" />
-        <span class="text-sm">Director General: +91 8121168074 (Mahendra)</span>
-      </div>
-      <div style="display: flex; align-items: flex-start;">
-        <Icon pack="mdi" name="phone" class="text-primary h-6 w-6" />
-        <span class="text-sm">USG Delegate Affairs: +91 7989376618 (Keerthana)</span>
-      </div>
-      <div style="display: flex; align-items: flex-start;">
-        <Icon pack="mdi" name="phone" class="text-primary h-6 w-6" />
-        <span class="text-sm">USG External Affairs: +91 8179491027 (Abrar)</span>
-      </div>
-      <div style="display: flex; align-items: flex-start;">
-        <Icon pack="mdi" name="mail" class="text-primary h-6 w-6" />
-        <span class="text-sm">Email: <a href = "mailto: muncmrit@gmail.com">muncmrit@gmail.com</a> </span>
-      </div>
-      <!-- Add a map here on the right -->
+  <Fragment slot="lead">Get in touch with us!</Fragment>
+
+  <div class="flex items-center justify-between gap-10">
+    <article
+    >
+      {
+        contact.map(({ title, subtitle, description, icon }) => (
+          <div class="mt-8 flex items-center gap-x-4">
+            <img src={icon} class="w-10 rounded-full bg-gray-50" />
+            <div class="leading-6 text-sm">
+              <p class="font-bold text-white text-lg">
+                <span class="absolute inset-0" />
+                {title}
+              </p>
+
+              <p class="font-bold text-gray-400 ">
+                <span class="absolute inset-0" />
+                {subtitle}
+              </p>
+              <p class="text-white">{description}</p>
+            </div>
+          </div>
+        ))
+      }
+    </article>
+
+    <div>
+      <iframe src="https://www.google.com/maps/embed?pb=!1m14!1m12!1m3!1d7179.069485428624!2d78.48913719126729!3d17.603680620417784!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!5e0!3m2!1sen!2sin!4v1695666293505!5m2!1sen!2sin" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
     </div>
-  </ContentSection>
-  
-  
-  
-  
-  
-  
+  </div>
+
+
+</ContentSection>
