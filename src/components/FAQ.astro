@@ -54,12 +54,12 @@ const features: Array<FeatureItem> = [
     <Fragment slot="lead">
         Can’t find the answer you’re looking for? Reach out to our customer support team.    
     </Fragment>
-    <ul class="grid max-w-6xl grid-cols-1 md:grid-cols-2 lg:grid-cols-1">
+    <ul class="grid max-w-6xl grid-cols-1 md:grid-cols-2 lg:grid-cols-1 ">
       {
         features.map(({ title,description }) => (
-          <li class="flex flex-col gap-4 border border-default bg-offset p-6">
-            <p class="font-extrabold text-xl">{title}</p>
-            <p class="text-justify text-offset text-sm">{description}</p>
+          <li class="flex flex-col gap-4 bg-white bg-opacity-20 backdrop-blur-lg drop-shadow-lg border border-default bg-offset p-6">
+            <p class="font-extrabold text-white text-xl">{title}</p>
+            <p class="text-justify text-white text-offset text-sm">{description}</p>
           </li>
         ))
       }
