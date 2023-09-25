@@ -34,15 +34,15 @@ const contact: Array<FeatureItem> = [
 <ContentSection title="Contact Us" id="contact">
   <Fragment slot="lead">Get in touch with us!</Fragment>
 
-  <div class="flex items-center justify-between gap-10">
-    <article
+  <div class="lg:flex block items-center justify-center gap-10">
+    <article class=" mr-5 grid gap-x-6 gap-y-10 grid-cols-2 lg:grid-cols-3 xl:grid-cols-2 xl:gap-x-8"
     >
       {
         contact.map(({ title, subtitle, description, icon }) => (
-          <div class="mt-8 flex items-center gap-x-4">
+          <div class=" items-center gap-x-4">
             <img src={icon} class="w-10 rounded-full bg-gray-50" />
             <div class="leading-6 text-sm">
-              <p class="font-bold text-white text-lg">
+              <p class="font-bold text-white lg:text-lg">
                 <span class="absolute inset-0" />
                 {title}
               </p>
@@ -58,8 +58,8 @@ const contact: Array<FeatureItem> = [
       }
     </article>
 
-    <div>
-      <iframe src="https://www.google.com/maps/embed?pb=!1m14!1m12!1m3!1d7179.069485428624!2d78.48913719126729!3d17.603680620417784!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!5e0!3m2!1sen!2sin!4v1695666293505!5m2!1sen!2sin" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+    <div class="">
+      <iframe src="https://www.google.com/maps/embed?pb=!1m14!1m12!1m3!1d7179.069485428624!2d78.48913719126729!3d17.603680620417784!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!5e0!3m2!1sen!2sin!4v1695666293505!5m2!1sen!2sin" width="300" height="200"  loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
     </div>
   </div>
 
