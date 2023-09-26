@@ -11,7 +11,7 @@ import Contact from "~/components/Contact.astro";
 import "~/styles/index.css"; 
 
 const { generator, site } = Astro;
-const image = new URL("social.jpg", site);
+const image = new URL("hero.jpg", site);
 const description =
   "CMRIT MUN 2023";
 ---
@@ -21,7 +21,7 @@ const description =
   <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width" />
-    <link rel="icon" href="../src/assets/favicon.ico" />
+    <link rel="icon" href="/src/assets/favicon.ico" />
     <meta name="generator" content={generator} />
 
     <title>CMRIT-MUN</title>
@@ -33,7 +33,6 @@ const description =
     <meta property="og:description" content={description} />
     <meta property="og:image" content={image} />
     <meta property="og:url" content={site} />
-    <meta name="twitter:card" content="summary_large_image" />
 
     <!-- initialize theme -->
     <script is:inline>
