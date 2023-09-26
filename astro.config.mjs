@@ -4,11 +4,11 @@ import { defineConfig } from "astro/config";
 
 // https://astro.build/config
 export default defineConfig({
-  site: "https://astro-moon-landing.netlify.app/",
+  site: "https://amazing-fenglisu-7f5265.netlify.app/",
   integrations: [
     tailwind(),
     image({
-      serviceEntryPoint: "@astrojs/image/sharp",
+      serviceEntryPoint: "",
     }),
   ],
   vite: {
