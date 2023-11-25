@@ -2,60 +2,92 @@
 import { Icon } from "astro-icon";
 import ContentSection from "~/components/content-section.astro";
 import type { FeatureItem } from "~/types";
+import Modal from "./Modal.astro";
 
+// Committees Section
 const features: Array<FeatureItem> = [
   {
     title: "AIPPM",
-    subtitle:"ALL INDIA POLITICAL PARTY MEET",
+    subtitle: "ALL INDIA POLITICAL PARTY MEET",
     description:
-      "AIPPM is a simulated committee in Model United Nations that focuses on the political landscape of India. It provides a platform for delegates to represent various political parties and engage in discussions regarding national and regional policies. Delegates analyze current political issues, draft resolutions, and negotiate with other parties to find solutions. AIPPM aims to enhance participants' understanding of Indian politics, policy-making, and coalition building.",
+      "AIPPM in Model United Nations is a dynamic simulation centering on India's political scene. Delegates, embodying diverse political parties, discuss and formulate resolutions on national and regional policies. Through negotiations and coalition building, AIPPM enriches participants' comprehension of Indian politics and policy-making.",
     icon: "mdi:handshake",
+    popup_title: "AIPPM Agenda",
+    popup_agenda1: "The Places of Worship Act: A Mechanism for Settlement or an Obstacle to Resolution?",
+    popup_agenda2: "Review and consideration of electoral reforms in India prior to the 2024 general elections.",
+    executive1:"Akash Degala",
+    executive2:"Shreyash Pandey",
   },
   {
     title: "UNHRC",
-    subtitle:"UNITED NATIONS HUMAN RIGHTS COUNCIL",
+    subtitle: "UNITED NATIONS HUMAN RIGHTS COUNCIL",
     description:
-      "UNHRC is a key committee in Model United Nations that addresses human rights issues on a global scale. Delegates in this committee represent different countries and work towards promoting and protecting human rights worldwide. They debate and develop resolutions related to pressing human rights concerns, such as freedom of expression, gender equality, and the rights of vulnerable populations. UNHRC plays a crucial role in raising awareness and taking action to ensure the realization of human rights for all.",
+      "UNHRC in Model United Nations is a pivotal committee addressing global human rights issues. Delegates represent diverse countries, collaborating to promote and protect human rights universally.They tackle pressing concerns like freedom of expression and gender equality. UNHRC plays a crucial role in raising awareness and taking action to ensure human rights for all.",
     icon: "mdi:human",
+    popup_title: "UNHRC Agenda",
+    popup_agenda1: "Protection of Human Rights in the Digital Era",
+    popup_agenda2: "Ensuring the Protection of Human Rights for Individuals Affected by the Israel-Hamas Conflict",
+    executive1:"Chaarmikha Nagalla",
+    executive2:"Samhita Vemuri",
   },
   {
     title: "DISEC",
-    subtitle:"DISARMAMENT & INTERNATIONAL SECURITY COMMITTEE",
+    subtitle: "DISARMAMENT & INTERNATIONAL SECURITY COMMITTEE",
     description:
-      "DISEC is a prominent committee in Model United Nations focused on matters related to disarmament, global security, and non-proliferation of weapons. Delegates representing different countries deliberate on a range of topics, including nuclear disarmament, arms control, cybersecurity, and counter-terrorism. Through research, negotiation, and drafting resolutions, DISEC seeks to establish measures that enhance international security, reduce arms race tensions, and foster cooperation among nations.",
+      "DISEC in Model United Nations addresses disarmament, global security, and non-proliferation. Delegates, representing diverse nations, discuss nuclear disarmament, arms control, and counter-terrorism. Through research and resolution drafting, DISEC aims to establish measures promoting international security, reducing arms race tensions, and fostering cooperation among nations to address critical global challenges.",
     icon: "mdi:security",
+    popup_title: "DISEC Agenda",
+    popup_agenda1: "Deliberation on curbing Outer Space Arms Race with special emphasis on reducing space threats",
+    popup_agenda2: "Enhancing transparency for peaceful exploration in Outer Space",
+    executive1:"Eswar Chava",
+    executive2:"Minnila Nalluri",
   },
   {
     title: "WB",
-    subtitle:"World Bank",
+    subtitle: "WORLD BANK",
     description:
-      "The World Bank Committee in Model United Nations (MUN) deals with global financial and economic matters. Delegates, representing member states, focus on development, poverty reduction, infrastructure investment, and financial stability. Through research and resolution drafting, the committee aims to create policies that promote economic growth, reduce inequalities, and alleviate poverty worldwide. It offers delegates a platform to collaborate and develop innovative solutions to these critical global challenges.",
+      "In MUN, the World Bank Committee tackles global economic issues. Delegates, from member states, focus on development, poverty reduction, infrastructure investment, and financial stability. Through research and resolution drafting, they aim to create policies promoting economic growth, reducing inequalities, and alleviating global poverty, fostering collaboration and innovative solutions.",
     icon: "mdi:money",
+    popup_title: "WB Agenda",
+    popup_agenda1: "Discussing on Safegaurding Financial Stability Amid High ",
+    popup_agenda2: "Inflation and Geopolitical Risks- 2023-2025",
+    executive1:"Afnaan Omer Khan",
+    executive2:"Abhishek Arul",
   },
   {
     title: "IP",
-    subtitle:"INTERNATIONAL PRESS",
+    subtitle: "INTERNATIONAL PRESS",
     description:
-      "The International Press Committee in Model United Nations is responsible for reporting on the proceedings and activities of the conference. Participants in this committee take on the role of journalists, photographers, and media personnel. They gather information, conduct interviews, and produce news articles, press releases, and multimedia content. The International Press plays a vital role in disseminating information, fostering dialogue, and documenting the diverse perspectives and diplomatic efforts of the Model UN conference.",
+      "The International Press Committee in Model United Nations reports on conference proceedings. Participants, embodying journalists and media personnel, gather information, conduct interviews, and produce news articles and multimedia content. This vital role disseminates information, fosters dialogue, and documents diverse perspectives and diplomatic efforts, contributing to the Model UN conference.",
     icon: "mdi:camera",
+    popup_title: "IP Agenda",
+    popup_agenda1: "No Agenda",
+    popup_agenda2: "No Agenda",
+    executive1:"Preethi Polu",
+    executive2:"Akanksha Saxena",
   },
 ];
 ---
 
 <ContentSection title="Committees" id="committee">
-  <Fragment slot="lead">
-    Our Committee Selection
-  </Fragment>
+  <Fragment slot="lead">Our Committee Selection</Fragment>
   <ul class="grid max-w-6xl grid-cols-1 md:grid-cols-2 lg:grid-cols-2">
     {
-      features.map(({ title, subtitle,description, icon }) => (
-        <li class="flex flex-col items-center gap-5 text-white bg-white bg-opacity-20 backdrop-blur-lg drop-shadow-lg border border-default bg-offset p-6">
-          <div class="h-16 w-16 text-white rounded-full border-2 border-current p-3">
+      features.map(({ title, subtitle, description, icon,popup_title,popup_agenda1,popup_agenda2,executive1,executive2 }) => (
+        <li class="flex flex-col items-center gap-5 border border-default bg-offset bg-white bg-opacity-20 p-6 text-white drop-shadow-lg backdrop-blur-lg">
+          <div class="h-16 w-16 rounded-full border-2 border-current p-3 text-white">
             <Icon name={icon} />
           </div>
           <p class="text-center font-extrabold text-xl">{title}</p>
           <p class="text-center font-extrabold text-sm">{subtitle}</p>
-          <p class="lg:text-justify  text-white  text-sm">{description}</p>
+          <p class="text-white  text-sm  lg:text-justify">{description}</p>
+          <Modal
+          title = {popup_title}
+          popup_agenda1 = {popup_agenda1}
+          popup_agenda2 = {popup_agenda2}
+          executive1 = {executive1}
+          executive2 = {executive2}
+          />
         </li>
       ))
     }

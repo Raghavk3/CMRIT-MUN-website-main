@@ -9,6 +9,11 @@ export interface FeatureItem {
   icon: string;
   subtitle:string;
   title: string;
+  popup_title: string;
+  popup_agenda1: string;
+  popup_agenda2: string;
+  executive1: string;
+  executive2:string;
 }
 
 export interface FooterLink {

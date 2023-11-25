@@ -1,0 +1,106 @@
+---
+component: true;
+const {title, popup_agenda1,popup_agenda2,executive1,executive2 } = Astro.props;
+---
+
+<div x-data="{ open: false }">
+  <!-- Button to open the modal -->
+  <button
+    @click="open = true"
+    class="btn btn-primary rounded-lg bg-blue-700 px-5 py-2.5 text-center font-medium text-white text-sm hover:bg-blue-800 focus:outline-none focus:ring-4 focus:ring-blue-300 dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800"
+    >View Agenda</button
+  >
+
+  <!-- Modal overlay -->
+  <div
+    x-show="open"
+    @click.self="open = false"
+    class="fixed inset-0 z-50 bg-black bg-opacity-90"
+  >
+  </div>
+
+  <!-- Modal content -->
+  <div
+    x-show="open"
+    class="fixed inset-0 z-50 flex items-center justify-center"
+  >
+    <div class="modal glassmorphism bg-white p-8">
+      <div class="text-center">
+        <!-- Title -->
+        <h2 class="mb-4 font-bold text-white text-2xl">{title}</h2>
+      </div>
+
+      <div class="modal_p">
+        <!-- Description -->
+        <h3 class="font-bold"> Agenda 1:</h3>
+        <p class="text-white">{popup_agenda1}</p>
+        <br>
+        <h3 class="font-bold">Agenda 2:</h3>
+        <p class="text-white">{popup_agenda2}</p>
+        <br>
+      </div>
+
+      <h3 class="font-bold">Executive Board:</h3>
+      <div class="modal_p">
+        <div>
+          <p>Chair: {executive1}</p>
+        </div>
+        <div>
+          <p>Vice Chair: {executive2}</p>
+        </div>
+
+      </div>
+
+      <!-- Close button -->
+      <div>
+        <button
+          @click="open = false"
+          class="btn btn-secondary absolute right-5 top-0 mt-4 text-white text-2xl"
+          >&times</button
+        >
+      </div>
+    </div>
+  </div>
+</div>
+
+<style>
+  /* Customize modal styles if needed */
+  .modal {
+    width: 600px;
+    height: 460px;
+    max-width: 600px;
+    max-height: 600px;
+  }
+
+  @media (max-width: 767px) {
+  .modal {
+    max-width: 100%; /* Adjust max-width for smaller screens */
+    margin: 20px; /* Add some margin to improve spacing */
+  }
+
+    /* Adjust text size for phone resolutions */
+    .modal h2 {
+    font-size: 1.5rem; /* Example font size for heading */
+    margin-bottom: 1rem; /* Adjust spacing */
+  }
+
+  .modal_p p {
+    font-size: 12px; /* Example font size for paragraph */
+    margin-bottom: 5px; /* Adjust spacing */
+  }
+
+  .modal button {
+    font-size: 1rem; /* Example font size for button */
+  }
+}
+
+  /* Glassmorphism styles */
+  .glassmorphism {
+    background: rgba(255, 255, 255, 0.1);
+    backdrop-filter: blur(10px);
+    border-radius: 12px;
+    border: 1px solid rgba(255, 255, 255, 0.125);
+    box-shadow: 0 0 16px rgba(0, 0, 0, 0.1);
+  }
+
+</style>

@@ -10,6 +10,7 @@ const featuredSites = await getCollection(
 const orderedSites = featuredSites.sort(
   (a, b) => a.data.featured! - b.data.featured!,
 );
+// Secretariat Section
 
 const features: Array<FeatureItem> = [
   {
