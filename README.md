@@ -35,12 +35,9 @@
       - Social handles at the footer.
 
 ## Version-2:
-- Plan to finish the version-2(final version) by the end of September 2023.
-- Will comprise of advanced components and layout of the website.
-- V2 will include;
-      - Adding of pop-up cards in each committee grids where the grid will be showing the agenda for each committee and when we click on it the pop-up will open.
-      - Completion of Secretariat picture adding and the names of other members.
-      - Add an anchor tag for the registration button which will redirect to the google form.
-      - Add contact us and college map at the footer/extra part for contact.
-
+- Adding of pop-up cards in each committee grids where the grid will be showing the agenda for each committee and when we click on it the pop-up will open.
+- Completion of Secretariat picture adding and the names of other members.
+- Add an anchor tag for the registration button which will redirect to the google form.
+- Add contact us and college map at the footer/extra part for contact.
+- Adding Agendas details.
 
