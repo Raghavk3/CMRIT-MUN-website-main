@@ -12,19 +12,19 @@ const {title, popup_agenda1,popup_agenda2,executive1,executive2 } = Astro.props;
   >
 
   <!-- Modal overlay -->
-  <div
+  <!-- <div
     x-show="open"
     @click.self="open = false"
-    class="absolute inset-0 bg-black bg-opacity-90"
+    class="absolute inset-0 bg-black bg-opacity-90" 
   >
-  </div>
+  </div> -->
 
   <!-- Modal content -->
   <div
     x-show="open"
     class="absolute inset-0 flex items-center justify-center"
   >
-    <div class="modal glassmorphism bg-white p-8">
+    <div class="modal glassmorphism bg-black p-8">
       <div class="text-center">
         <!-- Title -->
         <h2 class="mb-4 font-bold text-white text-2xl">{title}</h2>
@@ -75,7 +75,8 @@ const {title, popup_agenda1,popup_agenda2,executive1,executive2 } = Astro.props;
   @media (max-width: 767px) {
   .modal {
     max-width: 100%; /* Adjust max-width for smaller screens */
-    margin: 20px; /* Add some margin to improve spacing */
+    height: 100%;
+    margin: 0px; /* Add some margin to improve spacing */
   }
 
     /* Adjust text size for phone resolutions */
@@ -95,12 +96,12 @@ const {title, popup_agenda1,popup_agenda2,executive1,executive2 } = Astro.props;
 }
 
   /* Glassmorphism styles */
-  .glassmorphism {
-    background: rgba(255, 255, 255, 0.1);
+  /* .glassmorphism {
+    background: rgba(0, 0, 0, 0.1);
     backdrop-filter: blur(10px);
     border-radius: 12px;
     border: 1px solid rgba(255, 255, 255, 0.125);
     box-shadow: 0 0 16px rgba(0, 0, 0, 0.1);
-  }
+  } */
 
 </style>
