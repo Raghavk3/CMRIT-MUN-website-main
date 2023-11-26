@@ -15,14 +15,14 @@ const {title, popup_agenda1,popup_agenda2,executive1,executive2 } = Astro.props;
   <div
     x-show="open"
     @click.self="open = false"
-    class="fixed inset-0 z-50 bg-black bg-opacity-90"
+    class="absolute inset-0 bg-black bg-opacity-90"
   >
   </div>
 
   <!-- Modal content -->
   <div
     x-show="open"
-    class="fixed inset-0 z-50 flex items-center justify-center"
+    class="absolute inset-0 flex items-center justify-center"
   >
     <div class="modal glassmorphism bg-white p-8">
       <div class="text-center">
