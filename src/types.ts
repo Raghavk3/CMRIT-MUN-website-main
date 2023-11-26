@@ -14,6 +14,11 @@ export interface FeatureItem {
   popup_agenda2: string;
   executive1: string;
   executive2:string;
+  social: {
+    instagram: string;
+    whatsapp: string;
+    linkedin: string;
+  };
 }
 
 export interface FooterLink {

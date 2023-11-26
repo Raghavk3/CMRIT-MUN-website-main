@@ -2,6 +2,7 @@
 import { getCollection } from "astro:content";
 import ContentSection from "~/components/content-section.astro";
 import type { FeatureItem } from "~/types";
+import { Icon } from "astro-icon";
 const featuredSites = await getCollection(
   "showcase",
   ({ data }) => "featured" in data,
@@ -18,6 +19,11 @@ const features: Array<FeatureItem> = [
     subtitle: "Secretary General",
     description: "https://i.imgur.com/tD8TG0K.png",   
     icon: "mdi:instagram",
+    social: {
+    instagram: "https://www.instagram.com/sanjanayammanur/",
+    whatsapp: "#", 
+    linkedin: "https://www.linkedin.com/in/sanjana-yammanur/",
+  },
   },
   {
     title: "Mahendra Lakshmi",
@@ -25,51 +31,91 @@ const features: Array<FeatureItem> = [
     description:
       "https://i.imgur.com/eB1skVG.png",
     icon: "mdi:instagram",
+    social: {
+    instagram: "https://www.instagram.com/maahe_45/",
+    whatsapp: "#",
+    linkedin: "https://www.linkedin.com/in/lakshmimahendrasathani/",
+  },
   },
   {
     title: "J. Chandrika",
     subtitle: "Deputy Secretary General",
     description:"https://i.imgur.com/R6Gz30F.png",
     icon: "mdi:security",
+    social: {
+    instagram: "https://www.instagram.com/chandrika_jampani/",
+    whatsapp: "https://wa.me/6304313551", // Replace with the actual WhatsApp link
+    linkedin: "https://www.linkedin.com/in/chandrika-jampani-77a556295/",
+  },
   },
   {
     title: "M. Pramod Reddy",
     subtitle: "Deputy Director General",
     description:"https://i.imgur.com/XNHeruH.png",
     icon: "mdi:camera",
+    social: {
+    instagram: "https://www.instagram.com/_pramod.reddy_/",
+    whatsapp: "https://wa.me/9908245151",
+    linkedin: "#",
+  },
   },
   {
     title: "Tanmay Pradhan",
-    subtitle: "USG-IT Head",
+    subtitle: "USG-IT",
     description: "https://i.imgur.com/0BXL3xg.png",
     icon: "mdi:security",
+    social: {
+    instagram: "https://www.instagram.com/tanmaypradhan_/",
+    whatsapp: "#", 
+    linkedin: "https://www.linkedin.com/in/tanmay-pradhan-368109212/",
+  },
   },
   {
     title: "Raghava Kesanapalli",
-    subtitle: "USG-IT Head",
+    subtitle: "USG-IT",
     description:"https://i.imgur.com/TmBoVnT.png",
     icon: "mdi:camera",
+    social: {
+    instagram: "https://www.instagram.com/raghav.k_/",
+    whatsapp: "https://wa.me/9959840781", // Replace with the actual WhatsApp link
+    linkedin: "https://www.linkedin.com/in/raghava-kesanapalli-980048228/",
+  },
   },
   {
-    title: "Jatin",
-    subtitle: "USG-Design Head",
+    title: "Jatin Jangir",
+    subtitle: "USG-Design",
     description:
       "https://i.imgur.com/E9dVBdi.png",
     icon: "mdi:security",
+    social: {
+    instagram: "https://www.instagram.com/spaceinfinity__/",
+    whatsapp: "https://wa.me/8143151005", 
+    linkedin: "https://www.linkedin.com/in/astro-jatin-jangir-0287a6228/",
+  },
   },
   {
     title: "Sakshi Sinha",
-    subtitle: "USG-Marketing Head",
+    subtitle: "USG-Marketing",
     description:
       "https://i.imgur.com/IDiVXT6.png",
     icon: "mdi:camera",
+    social: {
+    instagram: "https://www.instagram.com/sakshe.sinha/",
+    whatsapp: "#", // Replace with the actual WhatsApp link
+    linkedin: "https://www.linkedin.com/in/sakshi-sinha-75a7ba21b/",
+  },
   },
   {
     title: "Keerthana",
-    subtitle: "USG-Delegate Affairs Head",
+    subtitle: "USG-Delegate Affairs",
     description:
       "https://i.imgur.com/WF1pZ8I.png",
     icon: "mdi:camera",
+    social: {
+    instagram: "https://www.instagram.com/keerthana.1003/",
+    whatsapp: "#", // Replace with the actual WhatsApp link
+    linkedin: "#",
+  },
   },
   {
     title: "Akanksha",
@@ -77,27 +123,71 @@ const features: Array<FeatureItem> = [
     description:
       "https://i.imgur.com/tlmMh9y.png",
     icon: "mdi:camera",
+    social: {
+    instagram: "https://www.instagram.com/ananya.srivatsava.710/",
+    whatsapp: "#", // Replace with the actual WhatsApp link
+    linkedin: "#",
+  },
   },
   {
-    title: "Abrar",
+    title: "Abrar Ahmar",
     subtitle: "USG-External Affairs",
     description:
       "https://i.imgur.com/RM8C7rk.png",
     icon: "mdi:camera",
+    social: {
+    instagram: "https://www.instagram.com/abrar_ahmar/",
+    whatsapp: "#", // Replace with the actual WhatsApp link
+    linkedin: "#",
+  },
   },
   {
-    title: "Jahnavi",
+    title: "Jahnavi Nandanuri",
     subtitle: "OC-Head",
     description:
       "https://i.imgur.com/1f1IKs0.png",
     icon: "mdi:camera",
+    social: {
+    instagram: "https://www.instagram.com/__jaaah__naviiiii__/",
+    whatsapp: "https://wa.me/1234567890", // Replace with the actual WhatsApp link
+    linkedin: "https://www.linkedin.com/in/sanjana-yammanur/",
+  },
   },
   {
     title: "M.Srilekha",
-    subtitle: "USG-Venue/Socials head",
+    subtitle: "USG-Venue/Socials",
     description:
       "https://i.imgur.com/LbPnEaN.png",
     icon: "mdi:camera",
+    social: {
+    instagram: "#",
+    whatsapp: "#", // Replace with the actual WhatsApp link
+    linkedin: "https://www.linkedin.com/in/srilekha152004/",
+  },
+  },
+  {
+    title: "Shaik Sumaiya",
+    subtitle: "USG Design",
+    description:
+      "https://i.imgur.com/emAJ5lV.png",
+    icon: "mdi:camera",
+    social: {
+    instagram: "https://www.instagram.com/shaikalia4_/",
+    whatsapp: "#", // Replace with the actual WhatsApp link
+    linkedin: "https://www.linkedin.com/in/shaik-sumaiya-64a272264/",
+  },
+  },
+  {
+    title: "Vedanth Kankan",
+    subtitle: "OC-Head",
+    description:
+      "https://i.imgur.com/DRZ0dww.png",
+    icon: "mdi:camera",
+    social: {
+    instagram: "https://www.instagram.com/itsvedanth/",
+    whatsapp: "#", // Replace with the actual WhatsApp link
+    linkedin: "https://www.linkedin.com/in/vedanth-kankan-a84466257/",
+  },
   },
 
 ];
@@ -108,25 +198,54 @@ const features: Array<FeatureItem> = [
     Meet our <span class="text-primary">Team</span>
   </Fragment>
   <div style="margin-top:-80px;">
-    <div class="mx-auto max-w-2xl px-5 mt-10 sm:px-6 sm:py-24 lg:max-w-7xl lg:px-8">
+    <div class="mx-auto max-w-2xl px-4 sm:px-6 sm:py-24 lg:max-w-7xl lg:px-8">
       <div
         class="grid grid-cols-1 gap-x-6 gap-y-10 sm:grid-cols-2  lg:grid-cols-3 xl:grid-cols-5 xl:gap-x-8"
       >
-        {
-          features.map(({ title, subtitle,description}) => (
-            <div>
-              <div class="aspect-h-1 aspect-w-1 xl:aspect-h-8 xl:aspect-w-7 w-full overflow-hidden rounded-lg shadow-sm shadow-orange-200 border bg-gray-200">
-                <img
-                  src={description}
-                  class="h-full w-full object-cover object-center group-hover:opacity-75"
-                />
+      {
+        features.map(({ title, subtitle, description, social }) => (
+          <div class="relative grid-item">
+            <div class="aspect-h-1 aspect-w-1 xl:aspect-h-8 xl:aspect-w-7 w-full overflow-hidden rounded-lg shadow-sm shadow-orange-200 border bg-gray-200">
+              <img
+                src={description}
+                class="h-full w-full object-cover object-center group-hover:opacity-75"
+              />
+              {/* Add the overlay div for social media links */}
+              <div class="overlay">
+                <div class="flex items-center">
+                  <a
+                    href={social.instagram}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    class="mr-2"
+                  >
+                    <Icon name="mdi:instagram" class="h-6 w-6 text-white" />
+                  </a>
+                  <a
+                    href={social.whatsapp}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    class="mr-2"
+                  >
+                    <Icon name="mdi:whatsapp" class="h-6 w-6 text-white" />
+                  </a>
+                  <a
+                    href={social.linkedin}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                  >
+                    <Icon name="mdi:linkedin" class="h-6 w-6 text-white" />
+                  </a>
+                </div>
               </div>
-              <h3 class="mt-2 font-bold text-white text-md">{title}</h3>
-              <p class="text-gray text-gray-500 font-medium text-sm">{subtitle}</p>
             </div>
-          ))
-        }
+            <h3 class="mt-2 font-bold text-white text-md">{title}</h3>
+            <p class="text-gray text-gray-500 font-medium text-sm">{subtitle}</p>
+          </div>
+        ))
+      }             
       </div>
     </div>
   </div>
 </ContentSection>
+
